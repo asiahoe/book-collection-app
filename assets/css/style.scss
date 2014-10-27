@@ -1,0 +1,162 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base";
+@import "base/grid-settings";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.full {
+	background-color: $purple;
+	min-width: 100%;
+}
+
+header {
+	@include pad(3em);
+}
+
+.logo {
+	@include outer-container;
+
+	h1, h2 {
+		@include span-columns(6 of 12);
+
+		color: #FFF;
+	}
+
+	h1 {
+		margin-bottom: .75em;
+
+		a {
+			color: #FFF;
+		}
+	}
+
+	h2 {
+		@include omega;
+
+		font-size: $h3-font-size;
+		line-height: 2.5;
+		text-align: right;
+		vertical-align: bottom;
+	}
+
+	button {
+		font-family: $avenir;
+		font-weight: 800;
+	}
+
+	button, input {
+		@include span-columns(12);
+	}
+
+	input {
+		background: #FFF url("../img/searchicon.png") no-repeat .25em;
+		background-size: 1em;
+		font-size: 1.5em;
+		padding: 0 1.75em;
+	}
+}
+
+.content {
+	.full {
+		background-color: $light-gray;
+	}
+
+	header {
+		@include outer-container;
+	}
+
+	h1 {
+		font-size: $h2-font-size;
+	}
+
+	p.zero {
+		@include outer-container;
+		@include pad;
+
+		font-size: $h2-font-size;
+		margin-top: 5em;
+		text-align: center;
+	}
+}
+
+ul {
+	@include outer-container;
+	@include pad;
+}
+
+li {
+	@include span-columns(3);
+	@include omega(4n);
+	@include pad;
+
+	margin-bottom: 30px;
+	padding-bottom: 30%; // Padding hack via Smashing.
+	position: relative;
+	transition: opacity .5s ease;
+}
+
+li:hover {
+	position: relative;
+	opacity: .7;
+}
+
+.detail {
+	@include outer-container;
+}
+
+.book {
+	@include span-columns(3);
+	@include pad;
+
+	position: absolute;
+
+	img {
+		margin-bottom: 1em;
+		position: relative;
+	}
+
+	button {
+		@include span-columns(3 of 3);
+	}
+}
+
+.meta {
+	@include span-columns(9);
+	@include shift(3);
+	@include pad;
+
+	h2 {
+		margin-bottom: .5em;
+		text-align: left;
+	}
+
+	h3 {
+		@include span-columns(4.5 of 9);
+	}
+
+	h3.publisher {
+		text-align: right;
+	}
+}
+
+.description {
+	@include span-columns(9);
+	@include shift(3);
+	@include pad;
+}
+
+img {
+	border: $base-border;
+	border-radius: $base-border-radius;
+	position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	width: 100%;
+		height: 100%;
+}
