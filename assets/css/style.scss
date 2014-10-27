@@ -46,10 +46,6 @@ header {
 	button {
 		font-family: $avenir;
 		font-weight: 800;
-
-		a:hover {
-			color: #FFF;
-		}
 	}
 
 	button, input {
@@ -163,4 +159,101 @@ img {
 		left: 0;
 	width: 100%;
 		height: 100%;
+}
+
+// Responsive
+
+@include media($medium-screen-up) {
+	.logo {
+
+		h2 {
+			font-size: $h4-font-size;
+		}
+
+	}
+
+	li {
+		@include span-columns(4);
+		@include omega(2n);
+
+		height: 22em;
+
+	}
+
+	.meta {
+		h2 {
+			font-size: $h4-font-size;
+		}
+
+		h3 {
+			font-size: $h5-font-size;
+		}
+	}
+
+}
+
+@include media($small-screen-up) {
+	header {
+		@include pad(1em 2em 1em);
+	}
+	.logo {
+		h1, h2 {
+			@include span-columns(8);
+			margin-bottom: 0;
+			text-align: left;
+		}
+
+		button {
+			font-size: .8em;
+			margin-bottom: 1.5em;
+		}
+
+		input {
+			font-size: $base-font-size;
+		}
+	}
+
+	.content {
+		header {
+			background-color: $light-gray;
+		}
+
+		.full {
+			background-color: #FFF;
+		}
+		h1 {
+			font-size: $h3-font-size;
+			text-align: center;
+		}
+
+		li {
+			height: 14em;
+		}
+
+		.book {
+			@include span-columns(4);
+			@include omega;
+
+			position: relative;
+		}
+
+		.meta {
+			@include span-columns(4);
+			@include shift(0);
+
+			background-color: $light-gray;
+			margin: 2em 0 1em;
+
+			h3 {
+				@include span-columns(4);
+				@include omega;
+				text-align: left;
+			}
+		}
+
+		.description{
+			@include span-columns(4);
+			@include shift(0);
+		}
+	}
 }

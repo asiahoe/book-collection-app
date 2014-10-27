@@ -274,8 +274,6 @@ header {
   .logo button {
     font-family: Avenir, "Open Sans", Roboto, Helvetica, Arial, sans-serif;
     font-weight: 800; }
-    .logo button a:hover {
-      color: #FFF; }
   .logo button, .logo input {
     float: left;
     display: block;
@@ -416,5 +414,91 @@ img {
   left: 0;
   width: 100%;
   height: 100%; }
+
+@media screen and (max-width: 37.5em) {
+  .logo h2 {
+    font-size: 1.25em; }
+
+  li {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 48.21067%;
+    height: 22em; }
+    li:last-child {
+      margin-right: 0; }
+    li:nth-child(2n) {
+      margin-right: 0; }
+    li:nth-child(2n+1) {
+      clear: left; }
+
+  .meta h2 {
+    font-size: 1.25em; }
+  .meta h3 {
+    font-size: 1em; } }
+@media screen and (max-width: 30em) {
+  header {
+    padding: 1em 2em 1em; }
+
+  .logo h1, .logo h2 {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 207.42297%;
+    margin-bottom: 0;
+    text-align: left; }
+    .logo h1:last-child, .logo h2:last-child {
+      margin-right: 0; }
+  .logo button {
+    font-size: .8em;
+    margin-bottom: 1.5em; }
+  .logo input {
+    font-size: 1em; }
+
+  .content header {
+    background-color: #EEEBEF; }
+  .content .full {
+    background-color: #FFF; }
+  .content h1 {
+    font-size: 1.5em;
+    text-align: center; }
+  .content li {
+    height: 14em; }
+  .content .book {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 100%;
+    margin-right: 0;
+    position: relative; }
+    .content .book:last-child {
+      margin-right: 0; }
+  .content .meta {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 100%;
+    margin-left: 0%;
+    background-color: #EEEBEF;
+    margin: 2em 0 1em; }
+    .content .meta:last-child {
+      margin-right: 0; }
+    .content .meta h3 {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%;
+      margin-right: 0;
+      text-align: left; }
+      .content .meta h3:last-child {
+        margin-right: 0; }
+  .content .description {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 100%;
+    margin-left: 0%; }
+    .content .description:last-child {
+      margin-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */
