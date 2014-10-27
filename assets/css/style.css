@@ -74,7 +74,7 @@ a {
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
   transition: color 0.1s linear;
-  color: #44D3D0;
+  color: #FFF;
   text-decoration: none; }
   a:hover {
     color: #27a4a1; }
@@ -274,6 +274,8 @@ header {
   .logo button {
     font-family: Avenir, "Open Sans", Roboto, Helvetica, Arial, sans-serif;
     font-weight: 800; }
+    .logo button a:hover {
+      color: #FFF; }
   .logo button, .logo input {
     float: left;
     display: block;

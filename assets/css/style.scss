@@ -46,6 +46,10 @@ header {
 	button {
 		font-family: $avenir;
 		font-weight: 800;
+
+		a:hover {
+			color: #FFF;
+		}
 	}
 
 	button, input {
