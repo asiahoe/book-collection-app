@@ -1,0 +1,16 @@
+button,
+input[type="submit"] {
+  @extend %button;
+  @include appearance(none);
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  box-shadow: 0 10px #3AB3B0;
+
+  &:hover {
+      box-shadow: 0 9px darken(#3AB3B0, 10);
+  }
+}

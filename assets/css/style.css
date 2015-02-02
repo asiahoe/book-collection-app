@@ -244,6 +244,9 @@ body {
 
 header {
   padding: 3em; }
+  @media screen and (max-width: 30em) {
+    header {
+      padding: 1em 2em 1em; } }
 
 .logo {
   max-width: 68em;
@@ -253,27 +256,29 @@ header {
     content: "";
     display: table;
     clear: both; }
-  .logo h1, .logo h2 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    color: #FFF; }
-    .logo h1:last-child, .logo h2:last-child {
-      margin-right: 0; }
   .logo h1 {
+    color: #FFF;
+    font-size: 2em;
     margin-bottom: .75em; }
     .logo h1 a {
       color: #FFF; }
-  .logo h2 {
-    margin-right: 0;
-    font-size: 1.5em;
-    line-height: 2.5;
-    text-align: right;
-    vertical-align: bottom; }
+    @media screen and (max-width: 30em) {
+      .logo h1 {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 207.42297%;
+        font-size: 1.5em;
+        text-align: left; }
+        .logo h1:last-child {
+          margin-right: 0; } }
   .logo button {
     font-family: Avenir, "Open Sans", Roboto, Helvetica, Arial, sans-serif;
     font-weight: 800; }
+    @media screen and (max-width: 30em) {
+      .logo button {
+        font-size: .8em;
+        margin-bottom: 1.5em; } }
   .logo button, .logo input {
     float: left;
     display: block;
@@ -282,13 +287,22 @@ header {
     .logo button:last-child, .logo input:last-child {
       margin-right: 0; }
   .logo input {
-    background: #FFF url("../img/searchicon.png") no-repeat 0.25em;
+    padding: 0.5em 3em;
+    background: #FFF url("../img/searchicon.png") no-repeat 1em;
     background-size: 1em;
-    font-size: 1.5em;
-    padding: 0 1.75em; }
+    border: 0;
+    border-radius: 5px;
+    color: #988FA2;
+    font-size: 1.25em; }
+    @media screen and (max-width: 30em) {
+      .logo input {
+        font-size: 1em; } }
 
 .content .full {
   background-color: #EEEBEF; }
+  @media screen and (max-width: 40em) {
+    .content .full {
+      background-color: #FFF; } }
 .content header {
   max-width: 68em;
   margin-left: auto;
@@ -297,8 +311,15 @@ header {
     content: "";
     display: table;
     clear: both; }
+  @media screen and (max-width: 40em) {
+    .content header {
+      background-color: #EEEBEF; } }
 .content h1 {
   font-size: 1.75em; }
+  @media screen and (max-width: 30em) {
+    .content h1 {
+      font-size: 1.25em;
+      text-align: center; } }
 .content p.zero {
   max-width: 68em;
   margin-left: auto;
@@ -316,11 +337,14 @@ ul {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  padding: 2.35765%; }
+  padding: 30px 3em; }
   ul:after {
     content: "";
     display: table;
     clear: both; }
+  @media screen and (max-width: 30em) {
+    ul {
+      padding: 15px 2em; } }
 
 li {
   float: left;
@@ -338,6 +362,23 @@ li {
     margin-right: 0; }
   li:nth-child(4n+1) {
     clear: left; }
+  @media screen and (max-width: 40em) {
+    li {
+      float: left;
+      display: block;
+      margin-right: 3.57866%;
+      width: 48.21067%;
+      height: 22em; }
+      li:last-child {
+        margin-right: 0; }
+      li:nth-child(2n) {
+        margin-right: 0; }
+      li:nth-child(2n+1) {
+        clear: left; } }
+  @media screen and (max-width: 30em) {
+    li {
+      height: 14em;
+      margin-bottom: 10px; } }
 
 li:hover {
   position: relative;
@@ -356,41 +397,83 @@ li:hover {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 23.23176%;
-  padding: 2.35765%;
+  width: 31.76157%;
+  padding: 30px 6em 30px 3em;
   position: absolute; }
   .book:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 40em) {
+    .book {
+      float: left;
+      display: block;
+      margin-right: 3.57866%;
+      width: 100%;
+      padding: 0 30px;
+      position: relative;
+      text-align: center; }
+      .book:last-child {
+        margin-right: 0; } }
   .book img {
     margin-bottom: 1em;
+    min-width: 150px;
     position: relative; }
   .book button {
     float: left;
     display: block;
-    margin-right: 10.1484%;
-    width: 100%; }
+    margin-right: 7.42297%;
+    width: 100%;
+    min-width: 150px; }
     .book button:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 40em) {
+      .book button {
+        float: left;
+        display: block;
+        margin-right: 3.57866%;
+        width: 100%; }
+        .book button:last-child {
+          margin-right: 0; } }
 
 .meta {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 74.41059%;
-  margin-left: 25.58941%;
-  padding: 2.35765%; }
+  width: 65.88078%;
+  margin-left: 34.11922%;
+  padding: 30px 3em 30px 0; }
   .meta:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 40em) {
+    .meta {
+      float: left;
+      display: block;
+      margin-right: 3.57866%;
+      width: 100%;
+      margin-left: 0%;
+      padding: 30px; }
+      .meta:last-child {
+        margin-right: 0; } }
   .meta h2 {
+    font-style: italic;
+    font-weight: 600;
     margin-bottom: .5em;
-    text-align: left; }
+    text-align: left;
+    text-shadow: 1px 1px 0 #8b8196; }
+    @media screen and (max-width: 40em) {
+      .meta h2 {
+        font-size: 1.25em;
+        font-weight: 400;
+        text-shadow: 0 0; } }
   .meta h3 {
     float: left;
     display: block;
-    margin-right: 3.16844%;
-    width: 48.41578%; }
+    margin-right: 3.57866%;
+    width: 48.21067%;
+    font-size: 1em; }
     .meta h3:last-child {
       margin-right: 0; }
+    .meta h3 a {
+      color: #8844D3; }
   .meta h3.publisher {
     text-align: right; }
 
@@ -398,11 +481,30 @@ li:hover {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 74.41059%;
-  margin-left: 25.58941%;
-  padding: 2.35765%; }
+  width: 65.88078%;
+  margin-left: 34.11922%;
+  padding: 30px 2.5em 30px 0;
+  font-size: 1.25em; }
   .description:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 40em) {
+    .description {
+      max-width: 68em;
+      margin-left: auto;
+      margin-right: auto;
+      float: left;
+      display: block;
+      margin-right: 3.57866%;
+      width: 100%;
+      margin-left: 0%;
+      padding: 30px;
+      font-size: 1em; }
+      .description:after {
+        content: "";
+        display: table;
+        clear: both; }
+      .description:last-child {
+        margin-right: 0; } }
 
 img {
   border: 1px solid #EEEBEF;
@@ -414,91 +516,5 @@ img {
   left: 0;
   width: 100%;
   height: 100%; }
-
-@media screen and (max-width: 37.5em) {
-  .logo h2 {
-    font-size: 1.25em; }
-
-  li {
-    float: left;
-    display: block;
-    margin-right: 3.57866%;
-    width: 48.21067%;
-    height: 22em; }
-    li:last-child {
-      margin-right: 0; }
-    li:nth-child(2n) {
-      margin-right: 0; }
-    li:nth-child(2n+1) {
-      clear: left; }
-
-  .meta h2 {
-    font-size: 1.25em; }
-  .meta h3 {
-    font-size: 1em; } }
-@media screen and (max-width: 30em) {
-  header {
-    padding: 1em 2em 1em; }
-
-  .logo h1, .logo h2 {
-    float: left;
-    display: block;
-    margin-right: 7.42297%;
-    width: 207.42297%;
-    margin-bottom: 0;
-    text-align: left; }
-    .logo h1:last-child, .logo h2:last-child {
-      margin-right: 0; }
-  .logo button {
-    font-size: .8em;
-    margin-bottom: 1.5em; }
-  .logo input {
-    font-size: 1em; }
-
-  .content header {
-    background-color: #EEEBEF; }
-  .content .full {
-    background-color: #FFF; }
-  .content h1 {
-    font-size: 1.5em;
-    text-align: center; }
-  .content li {
-    height: 14em; }
-  .content .book {
-    float: left;
-    display: block;
-    margin-right: 7.42297%;
-    width: 100%;
-    margin-right: 0;
-    position: relative; }
-    .content .book:last-child {
-      margin-right: 0; }
-  .content .meta {
-    float: left;
-    display: block;
-    margin-right: 7.42297%;
-    width: 100%;
-    margin-left: 0%;
-    background-color: #EEEBEF;
-    margin: 2em 0 1em; }
-    .content .meta:last-child {
-      margin-right: 0; }
-    .content .meta h3 {
-      float: left;
-      display: block;
-      margin-right: 7.42297%;
-      width: 100%;
-      margin-right: 0;
-      text-align: left; }
-      .content .meta h3:last-child {
-        margin-right: 0; }
-  .content .description {
-    float: left;
-    display: block;
-    margin-right: 7.42297%;
-    width: 100%;
-    margin-left: 0%; }
-    .content .description:last-child {
-      margin-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */
