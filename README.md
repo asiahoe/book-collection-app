@@ -1,6 +1,6 @@
 # Book Collection App
 
-Project 4 for the @[ThisIsMetis](https://github.com/thisismetis) UX & Front-End Development Fall 2014 BootCamp.
+Project 5 for the @[ThisIsMetis](https://github.com/thisismetis) UX & Front-End Development Fall 2014 BootCamp.
 
 ## Scenario
 
