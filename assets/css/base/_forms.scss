@@ -56,6 +56,20 @@ textarea {
   resize: vertical;
 }
 
+input {
+  @include span-columns(12);
+  @include pad(.5em 3em);
+  background: #FFF url("../img/searchicon.png") no-repeat 1em;
+  background-size: 1em;
+  border: none;
+  border-radius: $base-border-radius;
+  color: $dark-gray;
+
+  @include media($medium-screen) {
+    font-size: $h4-font-size;
+  }
+}
+
 input[type="search"] {
   @include appearance(none);
 }

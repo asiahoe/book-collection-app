@@ -7,10 +7,10 @@ $grid-columns: 12;
 $max-width: em(1088);
 
 // Neat Breakpoints
-$small-screen: em(480);
-$medium-screen: em(640);
-$large-screen: em(960);
+$small-screen: 480px;
+$medium-screen: 640px;
+$large-screen: 960px;
 
-$small-screen-up: new-breakpoint(max-width $small-screen 4);
-$medium-screen-up: new-breakpoint(max-width $medium-screen 8);
-$large-screen-up: new-breakpoint(max-width $large-screen 12);
+$small-screen-up: new-breakpoint(max-width em($medium-screen - 1) 4);
+$medium-screen-up: new-breakpoint(min-width em($medium-screen) max-width em($large-screen) 8);
+$large-screen-up: new-breakpoint(min-width em($large-screen + 1) 12);

@@ -2,15 +2,27 @@ button,
 input[type="submit"] {
   @extend %button;
   @include appearance(none);
+  @include span-columns(12);
+  box-shadow: 0 $gutter/4 $hover-link-color;
   border: none;
   cursor: pointer;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
 
-  box-shadow: 0 10px #3AB3B0;
-
   &:hover {
-      box-shadow: 0 9px darken(#3AB3B0, 10);
+    box-shadow: 0 $gutter/4 darken($hover-link-color, 15);
+  }
+}
+
+button {
+  font-family: $sans-serif;
+  font-weight: 800;
+  margin-bottom: $gutter/4;
+  outline: none;
+
+  &:active {
+    box-shadow: 0 $gutter/8 darken($hover-link-color, 15);
+    transform: translate(0, $gutter/8);
   }
 }

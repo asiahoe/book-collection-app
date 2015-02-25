@@ -1,7 +1,9 @@
 @import "bourbon/bourbon";
+@import "base/grid-settings";
 @import "neat/neat";
 @import "base/base";
-@import "base/grid-settings";
+
+// General
 
 body {
 	margin: 0;
@@ -14,57 +16,32 @@ body {
 }
 
 header {
-	@include pad(3em);
+	@include outer-container;
+	@include pad($gutter);
 
-	@include media($small-screen-up) {
-		@include pad(1em 2em 1em);
+	@include media($medium-screen) {
+		@include pad($gutter $gutter*3);
 	}
 }
 
 .logo {
 	@include outer-container;
 
+	@include media($medium-screen) {
+		@include pad($gutter $gutter*3);
+	}
+
 	h1 {
 		color: #FFF;
-		font-size: 2em;
-		margin-bottom: .75em;
+		font-size: $h3-font-size;
+		margin-bottom: $gutter/2;
+
+		@include media($medium-screen) {
+			font-size: $h1-font-size;
+		}
 
 		a {
 			color: #FFF;
-		}
-
-		@include media($small-screen-up) {
-			@include span-columns(8);
-			font-size: $h3-font-size;
-			text-align: left;
-		}
-	}
-
-	button {
-		font-family: $avenir;
-		font-weight: 800;
-
-		@include media($small-screen-up) {
-			font-size: .8em;
-			margin-bottom: 1.5em;
-		}
-	}
-
-	button, input {
-		@include span-columns(12);
-	}
-
-	input {
-		@include pad(.5em 3em);
-		background: #FFF url("../img/searchicon.png") no-repeat 1em;
-		background-size: 1em;
-		border: 0;
-		border-radius: $base-border-radius;
-		color: $dark-gray;
-		font-size: 1.25em;
-
-		@include media($small-screen-up) {
-			font-size: $base-font-size;
 		}
 	}
 }
@@ -72,68 +49,175 @@ header {
 .content {
 	.full {
 		background-color: $light-gray;
-
-		@include media($medium-screen-up) {
-			background-color: #FFF;
-		}
-	}
-
-	header {
-		@include outer-container;
-
-		@include media($medium-screen-up) {
-			background-color: $light-gray;
-		}
 	}
 
 	h1 {
-		font-size: $h2-font-size;
+		font-size: $h4-font-size;
+		text-align: center;
 
-		@include media($small-screen-up) {
-			font-size: $h4-font-size;
-			text-align: center;
+		@include media($medium-screen) {
+			font-size: $h2-font-size;
+			text-align: left;
 		}
 	}
 
 	p.zero {
-		@include outer-container;
-		@include pad;
-
 		font-size: $h2-font-size;
-		margin-top: 5em;
+		margin-top: $gutter*4.5;
 		text-align: center;
+
+		@include media($medium-screen) {
+			margin-top: $gutter*5.5;
+		}
 	}
 }
 
+// Book Detail
+
+.results {
+	.full {
+		background-color: #FFF;
+
+		@include media($medium-screen) {
+			background-color: $light-gray;
+		}
+	}
+
+	header {
+		background-color: $light-gray;
+
+		@include media($medium-screen) {
+			background-color: transparent;
+		}
+	}
+}
+
+.detail {
+	@include outer-container;
+	@include pad($gutter $gutter 0);
+
+	@include media($medium-screen) {
+		@include pad(0 $gutter*3);
+	}
+
+	.meta {
+
+		@include media($medium-screen-up) {
+			@include span-columns(5 of 8);
+			@include shift(3);
+			@include pad($gutter*2 0);
+		}
+
+		@include media($large-screen-up) {
+			@include span-columns(8);
+			@include shift(4);
+			@include pad($gutter*2 0);
+		}
+
+		h2 {
+			font-size: $h4-font-size;
+			font-style: italic;
+			margin-bottom: $gutter/2;
+
+			@include media($medium-screen-up) {
+				font-size: $h3-font-size;
+				font-weight: 600;
+				text-shadow: 1px 1px 0 darken($dark-gray, 5%);
+			}
+
+			@include media($large-screen-up) {
+				font-size: $h2-font-size;
+				font-weight: 600;
+				text-shadow: 1px 1px 0 darken($dark-gray, 5%);
+			}
+		}
+
+		h3 {
+			@include span-columns(6 of 12);
+			font-size: $h5-font-size;
+
+			@include media($large-screen-up) {
+				font-size: $h4-font-size;
+			}
+
+			a {
+				color: $purple;
+			}
+		}
+
+		h3.publisher {
+			text-align: right;
+		}
+	}
+
+	.book {
+		margin-bottom: $gutter*3;
+
+		@include media($medium-screen-up) {
+			@include padding(0 $gutter 0 0);
+			@include span-columns(3 of 8);
+			position: relative;
+				bottom: $gutter*5.5;
+		}
+
+		@include media($large-screen-up) {
+			@include span-columns(4 of 12);
+			@include pad(0 $gutter 0 0);
+			position: relative;
+				bottom: $gutter*5;
+		}
+
+		img {
+			margin-bottom: $gutter/2;
+		}
+	}
+
+	.description {
+		@include media($medium-screen-up) {
+			@include span-columns(5 of 8);
+			@include pad($gutter 0);
+			font-size: $h4-font-size;
+		}
+
+		@include media($large-screen-up) {
+			@include span-columns(8 of 12);
+			@include pad($gutter 0);
+			font-size: $h4-font-size;
+		}
+	}
+}
+
+// Library
+
 ul {
 	@include outer-container;
-	@include pad($gutter 3em);
+	@include pad($gutter);
 
-	@include media($small-screen-up) {
-		@include pad($gutter/2 2em);
+	@include media($medium-screen) {
+		@include pad($gutter $gutter*3);
 	}
 }
 
 li {
-	@include span-columns(3);
-	@include omega(4n);
-	@include pad;
-
-	margin-bottom: 30px;
-	padding-bottom: 30%; // Padding hack via Smashing.
-	position: relative;
+	margin-bottom: $gutter/2;
 	transition: opacity .5s ease;
 
-	@include media($medium-screen-up) {
-		@include span-columns(4);
+	@include media($small-screen-up) {
+		@include span-columns(2);
 		@include omega(2n);
-
-		height: 22em;
+		height: 15em;
 	}
 
-	@include media($small-screen-up) {
-		height: 14em;
-		margin-bottom: $gutter/3;
+	@include media($medium-screen-up) {
+		@include span-columns(4 of 12);
+		@include omega(3n);
+		height: 18em;
+	}
+
+	@include media($large-screen-up) {
+		@include span-columns(3 of 12);
+		@include omega(4n);
+		height: 18em;
 	}
 }
 
@@ -142,100 +226,9 @@ li:hover {
 	opacity: .7;
 }
 
-.detail {
-	@include outer-container;
-}
-
-.book {
-	@include span-columns(4);
-	@include pad($gutter 6em $gutter 3em);
-	position: absolute;
-
-	@include media($medium-screen-up) {
-		@include span-columns(8 of 8);
-		@include pad(0 $gutter);
-		position: relative;
-		text-align: center;
-	}
-
-	img {
-		margin-bottom: 1em;
-		min-width: 150px;
-		position: relative;
-	}
-
-	button {
-		@include span-columns(4 of 4);
-		min-width: 150px;
-
-		@include media($medium-screen-up) {
-			@include span-columns(8 of 8);
-		}
-	}
-}
-
-.meta {
-	@include span-columns(8);
-	@include shift(4);
-	@include pad($gutter 3em $gutter 0);
-
-	@include media($medium-screen-up) {
-		@include span-columns(8);
-		@include shift(0);
-		@include pad($gutter);
-	}
-
-	h2 {
-		font-style: italic;
-		font-weight: 600;
-		margin-bottom: .5em;
-		text-align: left;
-		text-shadow: 1px 1px 0 darken($dark-gray, 5%);
-
-		@include media($medium-screen-up) {
-			font-size: $h4-font-size;
-			font-weight: 400;
-			text-shadow: 0 0;
-		}
-	}
-
-	h3 {
-		@include span-columns(4 of 8);
-		font-size: $h5-font-size;
-
-		a {
-			color: $purple;
-		}
-	}
-
-	h3.publisher {
-		text-align: right;
-	}
-}
-
-.description {
-	@include span-columns(8);
-	@include shift(4);
-	@include pad($gutter 2.5em $gutter 0);
-	font-size: $h4-font-size;
-
-	@include media($medium-screen-up) {
-		@include outer-container;
-		@include span-columns(8);
-		@include shift(0);
-		@include pad($gutter);
-		font-size: $base-font-size;
-	}
-}
-
 img {
 	border: $base-border;
 	border-radius: $base-border-radius;
-	position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
 	width: 100%;
 		height: 100%;
 }
